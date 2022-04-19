@@ -17,19 +17,28 @@
   </head>
 
   <body>
-    <header>
-      <nav class="nav_container">
-        <h1 class="logo">DS.</h1>
-        <div class="hamburger_menu_container">
-          <div class="hamburger_menu_line top"></div>
-          <div class="hamburger_menu_line mid"></div>
-          <div class="hamburger_menu_line bottom"></div>
-        </div>
-      </nav>
-    </header>
+    <nav class="nav_container">
+      <h1 class="logo">DS.</h1>
+
+      <!--Mobile Nav-->
+      <div class="hamburger ">
+         <div class="bar"></div>
+      </div>
+    </nav>
+
+    <nav class="mobile_nav_container">
+      <a href="#">About</a>
+      <a href="#">Work</a>
+      <a href="#">Experience</a>
+      <a href="#">Contact</a>    
+
+      <a  href="https://youtube.com/" class="cta_button">
+        See more about me
+      </a>   
+    </nav>
 
     <section class="section intro">
-      <div>
+      <div class="block">
         <p class="subtitle_text">Hi, my name is</p>
         <h1>Damiano Schirinzi</h1>
         <p>
@@ -38,23 +47,27 @@
           experiences. <br />
           <br />I have a passion for all things tech and am constanstly trying
           to expand my knowledge within web, blockchain & games development.
-        </p>
+        </p>       
       </div>
 
-      <div class="cta_container">
-        <a class="cta_button" href="https://youtube.com/">See more about me</a>
-      </div>
+      <a  href="https://youtube.com/" class="cta_button">
+        See more about me
+      </a>    
+      
+
     </section>
 
     <section class="section about">
-      <div>
-        <div class="section_title">
-          <h1>About</h1>
-          <div class="section_line_container">
-            <div class="section_line top"></div>
-            <div class="section_line bottom"></div>
-          </div>
+
+      <div class="section_title">
+        <h1>About</h1>
+        <div class="section_line_container">
+          <div class="section_line top"></div>
+          <div class="section_line bottom"></div>
         </div>
+      </div>
+      
+      <div class="block">       
 
         <p>
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
@@ -73,15 +86,16 @@
     </section>
 
     <section class="section experience">
-      <div>
-        <div class="section_title">
-          <h1>Experience</h1>
-          <div class="section_line_container">
-            <div class="section_line top"></div>
-            <div class="section_line bottom"></div>
-          </div>
-        </div>
 
+      <div class="section_title">
+        <h1>Experience</h1>
+        <div class="section_line_container">
+          <div class="section_line top"></div>
+          <div class="section_line bottom"></div>
+        </div>
+      </div>
+
+      <div class="block">       
         <p>
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
@@ -99,7 +113,7 @@
     </section>
 
     <section class="section work">
-      <div>
+      <div class="block">
         <div class="section_title">
           <h1>Work</h1>
           <div class="section_line_container">
@@ -125,22 +139,23 @@
     </section>
 
     <section class="section contact">
-      <div>
-        <h1>Want to talk?</h1>      
+      <div >
+        <h1 class="center_text">Want to talk?</h1>      
 
-        <p>
+        <p class="center_text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
           amet erat euismod posuere et a nibh. 
         </p>
       </div>     
+     
+      <a  href="https://youtube.com/" class="cta_button">
+        See more about me
+      </a>
 
-      <div class="cta_container">
-        <a class="cta_button" href="https://youtube.com/">See more about me</a>
-      </div>
-      
-    </section>
+    </section>   
 
-   
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
+

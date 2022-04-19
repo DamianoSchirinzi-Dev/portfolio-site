@@ -13,7 +13,6 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    width: 100%;
 
     background-color: var(--main-bg-color-dark);    
     font-family: 'Open Sans', sans-serif;
@@ -70,11 +69,22 @@ p{
 }
 
 .section {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
     padding: 8.5rem 2.5rem;
 }
 
+.contact{
+    justify-content: center;
+    align-items: center;
+}
 
+.contact .center_text{
+    text-align: center;
+
+}
 
 .section_title{
     display: flex;
@@ -83,29 +93,71 @@ p{
 }
 
 .section_line_container{
-    
     margin: 0rem 0rem .7rem .5rem;
+    width: 100%;
 }
 
 .section_line{
-    width: 13.5rem;
+    width: stretch;
     height: 2px;
 
     background-color: var(--main-highlight-color-);
     margin: .35rem 0rem;
+    padding: 0;
 }
 
-.cta_container{
-    margin: 3.8rem 0rem;
-}
-
-.cta_button{
+/* From uiverse.io by @nikk7007 */
+.cta_button {
+    --color: var(--main-highlight-color-);
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    margin:2.5rem 0rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 600;
+    font-size: 17px;
+    border: 2px solid;
     text-decoration: none;
-    color: var(--main-highlight-color-);
-    font-weight: 400;
-    font-size: 18px;
-    
-    border: 2px solid var(--main-highlight-color-);
-    padding: 20px;
-
-}
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .cta_button::before, .cta_button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .cta_button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .cta_button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .cta_button:hover::before, .cta_button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .cta_button:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .cta_button:active {
+    filter: brightness(.8);
+   }
+   

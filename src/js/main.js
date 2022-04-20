@@ -1,17 +1,20 @@
 const menu_button = document.querySelector('.hamburger');
 const mobile_nav_menu = document.querySelector('.mobile_nav_container');
+var prevScrollPos = window.pageYOffset;
 
-const link = document.querySelector('.link')
+
+document.querySelectorAll('.link.mobile').forEach(item => {
+    item.addEventListener('click', event => {
+        closeMenu();
+    });
+})
 
 window.onload = function() {
     menu_button.addEventListener('click', function() {
-        menu_button.classList.toggle('is_active');
-        mobile_nav_menu.classList.toggle('is_active');       
-    });     
-    
+       openMenu();
+    });         
 }
 
-var prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     const nav_menu = document.querySelector('.nav_container');
@@ -26,6 +29,27 @@ window.onscroll = function() {
       
     prevScrollPos = currentScrollPos;
 }
+
+function openMenu(){
+    menu_button.classList.toggle('is_active');
+    mobile_nav_menu.classList.toggle('is_active');       
+}
+
+function closeMenu() { 
+    console.log("called");
+
+    menu_button.classList.remove('is_active');
+    mobile_nav_menu.classList.remove('is_active');
+    mobile_nav_menu.style.display = "none";
+
+    setTimeout(reEnableMenu(), 2000);
+}
+
+function reEnableMenu(){
+
+    mobile_nav_menu.style.display = "block";
+}
+
 
 function disableScrolling(){
     var x=window.scrollX;

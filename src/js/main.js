@@ -1,11 +1,13 @@
 const menu_button = document.querySelector('.hamburger');
 const mobile_nav_menu = document.querySelector('.mobile_nav_container');
 
+const link = document.querySelector('.link')
+
 window.onload = function() {
     menu_button.addEventListener('click', function() {
         menu_button.classList.toggle('is_active');
-        mobile_nav_menu.classList.toggle('is_active');
-    });
+        mobile_nav_menu.classList.toggle('is_active');       
+    });     
     
 }
 

@@ -18,11 +18,12 @@
     <title>Damiano Schirinzi || Portfolio</title>
   </head>
 
-  <body>
-    <nav class="nav_container">
+  <body class="main-body">
+    <nav class="nav-container">
       <h1><a class="logo" href="#section_intro">DS.</a></h1>
 
       <nav class="desktop_nav_container">
+        <button class="dark-mode-toggle">#</button>
         <a class="link" href="#section_about">About</a>
         <a class="link" href="#section_experience">Experience</a>
         <a class="link" href="#section_work">Work</a>
@@ -38,19 +39,24 @@
     </nav>
 
     <nav class="mobile_nav_container">
+
+      <button class="dark-mode-toggle">#</button>
+
       <a class="link mobile" href="#section_about">About</a>
       <a class="link mobile" href="#section_experience">Experience</a>
       <a class="link mobile" href="#section_work">Work</a>
       <a class="link mobile" href="#section_contact">Contact</a>
-
+      
       <a href="https://youtube.com/" class="cta_button"> Resume </a>
+
+
     </nav>
 
     <section class="section intro" id="section_intro">
       <div class="content-block-intro">
-        <p>Hi, my name is</p>
+        <p class="main-text highlighted">Hi, my name is</p>
         <h1>Damiano Schirinzi</h1>
-        <p>
+        <p class="main-text">
           I am a software developer who specialises in building, maintaining
           (and sometimes designing) intuitive and remarkable digital
           experiences. <br />
@@ -61,8 +67,10 @@
 
       <div class="sub-section intro">
         <h1>
-          I like to create fun and <strong>interactive</strong> that have a
-          <strong>human</strong> feel!
+          I like to create fun and
+          <strong class="header-text-emphasis">interactive</strong>
+          that have a 
+          <strong class="header-text-emphasis">human</strong> feel!
         </h1>
       </div>
 
@@ -79,7 +87,7 @@
       </div>
 
       <div class="content-block-about">
-        <p>
+        <p class="main-text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
           amet erat euismod posuere et a nibh. Integer non nisl elementum,
@@ -112,7 +120,7 @@
       </div>
 
       <div class="sub-section about">
-        <img class="test-image" src="public/images/cat-test.jpg">
+        <img class="test-image" src="public/images/cat-test.jpg" />
       </div>
     </section>
 
@@ -126,7 +134,7 @@
       </div>
 
       <div class="content-block">
-        <p>
+        <p class="main-text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
           amet erat euismod posuere et a nibh. Integer non nisl elementum,
@@ -154,7 +162,7 @@
       </div>
 
       <div class="content-block">
-        <p>
+        <p class="main-text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
           amet erat euismod posuere et a nibh. Integer non nisl elementum,
@@ -176,13 +184,12 @@
       <div>
         <h1 class="center_text">Want to talk?</h1>
 
-        <p class="center_text">
+        <p class="main-text center_text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
           amet erat euismod posuere et a nibh.
         </p>
       </div>
-
     </section>
 
     <script src="./src/js/main.js"></script>

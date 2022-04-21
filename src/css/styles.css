@@ -37,6 +37,9 @@ body {
 
   background-color: var(--main-bg-color-dark);
   font-family: "Open Sans", sans-serif;
+
+  transition: 0.3s;
+
 }
 
 h1 {
@@ -47,39 +50,37 @@ h1 {
   margin: 0.8rem 0rem 2rem 0rem;
 }
 
-p {
-  color: var(--main-text-color);
-  font-weight: 400;
-  font-size: var(--font-size-content-text);
-
-  margin: 0;
-}
-
 a {
   text-decoration: none;
   color: var(--main-highlight-color);
 
   font-size: var(--font-size-cta-button-mobile);
-  font-weight: 600;
+  font-weight: 800;
   margin-right: 40px;
 }
 
-strong{
+/* Text */
+.header-text-emphasis {
  color: var(--main-bg-color-light);
 }
 
+.main-text {
+  color: var(--main-text-color);
+  font-weight: 400;
+  font-size: var(--font-size-content-text);  
+}
+
 /* Navigation Bar */
-.nav_container {
+.nav-container {
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  z-index: 99;
   background-color: var(--main-bg-color-dark);
+  z-index: 99;
 
-  transition: top 0.4s;
+  transition: 0.3s;
 }
 
 .logo {
@@ -87,6 +88,10 @@ strong{
   font-weight: 600;
   font-size: var(--logo-size-mobile);
   cursor: pointer;
+}
+
+.dark-mode-toggle{
+   margin-right: 2rem;
 }
 
 .desktop_nav_container {
@@ -110,7 +115,7 @@ strong{
   background-color: var(--main-bg-color-dark);
   padding-top: 180px;
 
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .mobile_nav_container.is_active {
@@ -126,6 +131,10 @@ strong{
   text-align: center;
 
   font-size: var(--font-size-mobile-nav-links);
+}
+
+
+.dark-mode-toggle.mobile{ 
 }
 
 .mobile_nav_container .cta_button {
@@ -296,6 +305,22 @@ strong{
   width: 100%;
 }
 
+/*Dark mode toggles */
+.dark-mode-toggle{
+  
+}
+
+.light-mode-bg{
+  background-color: var(--main-bg-color-light);
+}
+
+.light-mode-text{
+  color: var(--main-text-color-light)
+}
+
+/* Dark mode toggle switch */
+
+
 @media screen and (min-width: 796px) {
   h1 {
     font-size: var(--font-size-header-desktop);
@@ -339,6 +364,10 @@ strong{
     grid-row-end: 2;
 
     align-self: end;
+  }
+
+  .sub-section-text{
+
   }
 
   .section_title{

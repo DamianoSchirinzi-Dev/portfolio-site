@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="src/css/styles.css" />
-    <link rel="stylesheet" href="src/base.css" />
+    <link rel="stylesheet" href="src/css/darkModeToggle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +22,12 @@
     <nav class="nav-container">
       <h1><a class="logo" href="#section_intro">DS.</a></h1>
 
-      <nav class="desktop_nav_container">
-        <button class="dark-mode-toggle">#</button>
+      <nav class="desktop-nav-container">
+         <!--<button class="dark-mode-toggle">#</button>-->
+        <div class="wrapper">
+          <input type="checkbox" name="checkbox" class="dark-mode-switch">
+        </div>
+
         <a class="link" href="#section_about">About</a>
         <a class="link" href="#section_experience">Experience</a>
         <a class="link" href="#section_work">Work</a>
@@ -38,24 +42,26 @@
       </div>
     </nav>
 
-    <nav class="mobile_nav_container">
+    <nav class="mobile-nav-container">
+      <div class="links-container">       
 
-      <button class="dark-mode-toggle">#</button>
+        <a class="link mobile" href="#section_about">About</a>
+        <a class="link mobile" href="#section_experience">Experience</a>
+        <a class="link mobile" href="#section_work">Work</a>
+        <a class="link mobile" href="#section_contact">Contact</a>
+        
+        <a href="https://youtube.com/" class="cta_button"> Resume </a> 
 
-      <a class="link mobile" href="#section_about">About</a>
-      <a class="link mobile" href="#section_experience">Experience</a>
-      <a class="link mobile" href="#section_work">Work</a>
-      <a class="link mobile" href="#section_contact">Contact</a>
-      
-      <a href="https://youtube.com/" class="cta_button"> Resume </a>
+        <input type="checkbox" name="checkbox" class="dark-mode-switch">
 
-
+      </div>
+       
     </nav>
 
     <section class="section intro" id="section_intro">
       <div class="content-block-intro">
         <p class="main-text highlighted">Hi, my name is</p>
-        <h1>Damiano Schirinzi</h1>
+        <h1 class="header-text">Damiano Schirinzi</h1>
         <p class="main-text">
           I am a software developer who specialises in building, maintaining
           (and sometimes designing) intuitive and remarkable digital
@@ -66,11 +72,11 @@
       </div>
 
       <div class="sub-section intro">
-        <h1>
+        <h1 class="header-text">
           I like to create fun and
-          <strong class="header-text-emphasis">interactive</strong>
+          <strong class="header-text emphasis">interactive</strong>
           that have a 
-          <strong class="header-text-emphasis">human</strong> feel!
+          <strong class="header-text emphasis">human</strong> feel!
         </h1>
       </div>
 
@@ -79,7 +85,7 @@
 
     <section class="section about" id="section_about">
       <div class="section_title">
-        <h1>About</h1>
+        <h1 class="header-text">About</h1>
         <div class="section_line_container">
           <div class="section_line top"></div>
           <div class="section_line bottom"></div>
@@ -126,7 +132,7 @@
 
     <section class="section experience" id="section_experience">
       <div class="section_title">
-        <h1>Experience</h1>
+        <h1 class="header-text">Experience</h1>
         <div class="section_line_container">
           <div class="section_line top"></div>
           <div class="section_line bottom"></div>
@@ -154,7 +160,7 @@
 
     <section class="section work" id="section_work">
       <div class="section_title">
-        <h1>Work</h1>
+        <h1 class="header-text">Work</h1>
         <div class="section_line_container">
           <div class="section_line top"></div>
           <div class="section_line bottom"></div>
@@ -182,7 +188,7 @@
 
     <section class="section contact" id="section_contact">
       <div>
-        <h1 class="center_text">Want to talk?</h1>
+        <h1 class="header-text center_text">Want to talk?</h1>
 
         <p class="main-text center_text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
@@ -191,6 +197,7 @@
         </p>
       </div>
     </section>
+    
 
     <script src="./src/js/main.js"></script>
   </body>

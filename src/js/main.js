@@ -1,5 +1,5 @@
 const menu_button = document.querySelector(".hamburger");
-const mobile_nav_menu = document.querySelector(".mobile_nav_container");
+const mobile_nav_menu = document.querySelector(".mobile-nav-container");
 const nav_menu = document.querySelector(".nav-container");
 var prevScrollPos = window.pageYOffset;
 
@@ -28,7 +28,7 @@ window.onload = function () {
     openMenu();
   });
 
-  document.querySelectorAll(".dark-mode-toggle").forEach((item) => {
+  document.querySelectorAll(".dark-mode-switch").forEach((item) => {
     item.addEventListener("click", (event) => {
         toggleDarkMode();
     });

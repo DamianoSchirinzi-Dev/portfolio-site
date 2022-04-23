@@ -1,13 +1,14 @@
 :root {
   /*Dark Mode Colors*/
   --main-bg-color-dark: #0c1225;
-  --main-highlight-color: #ff521b;
+  --main-highlight-color: #ff6739;
   --main-text-color: #d2d8da;
 
   /*Light Mode Colors*/
   --main-bg-color-light: #e6eaeb;
   --main-text-color-light: #0c1225;
 
+  /* font-sizes */
   --font-size-header-desktop: 3.7rem;
   --font-size-header-smaller-desktop: 3.4rem;
   --font-size-header-mobile: 2.9rem;
@@ -21,6 +22,9 @@
 
   --font-size-cta-button-desktop: 1.5rem;
   --font-size-cta-button-mobile: 1.2rem;
+
+  --font-size-cards-button-desktop: 1.5rem;
+  --font-size-cards-button-mobile: 1.2rem;
 
   --font-size-main-text-desktop: 1.25rem;
   --font-size-main-text-mobile: 1rem;
@@ -62,6 +66,8 @@ body {
   font-size: var(--font-size-main-text-mobile);
   margin-top: 1.8rem;
   margin-left: .5rem;
+  line-height: 150%;
+
 }
 
 .main-text.highlighted{
@@ -267,6 +273,61 @@ body {
   filter: brightness(0.8);
 }
 
+/*Cards*/
+.card {
+  height: 380px;
+  width: 380px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 1em ;
+ }
+ 
+  /*Image*/
+ .card-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: var(--main-highlight-color);
+  border-radius: 1em ;
+ }
+ 
+ /*Description */
+ .card-description {
+  display: flex;
+  position: absolute;
+  gap: 1em;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  height: 70%;
+  bottom: 0;
+  border-radius: 1em;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1rem;
+ }
+ 
+ /*Text*/
+ .text-title {
+  color: var(--main-bg-color-dark);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin:0;
+ }
+ 
+ .text-body {
+  font-size: var(--font-size-main-text-mobile);
+  line-height: 150%;
+  margin:0;
+ }
+ 
+ 
+ /* Hover states */
+ 
+ .card:hover .card-description {
+  transform: translateY(90%);
+ }
+ 
+
 /* Links */
 .link {
   position: relative;
@@ -415,10 +476,15 @@ body {
     grid-row-end: 3;
   }
 
+  .section.experience{
+    display:block;
+  }
+  
+
    /* Images */
   .developer-photo {
-    width: 60%;
-    margin-top: 80px;
+    width: 66%;
+    margin-top: 75px;
     align-self: start;
     justify-self: center;    
   }
@@ -458,6 +524,7 @@ body {
 
   .main-text {
     font-size: var(--font-size-main-text-desktop);
+    margin-top: .7rem;
     margin-left: .5rem;
   }
   

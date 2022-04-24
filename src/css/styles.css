@@ -572,17 +572,26 @@ body {
     justify-self: center;
   }
 
-  /*Navigation*/
-  .hamburger {
-    display: none;
-  }
+  /*Navigation*/ 
 
   .desktop-nav-container {
-    display: flex;
+    display: none;
   }
 
   .mobile-nav-container {
-    display: none;
+    display: flex;
+    right: 100%;
+    width: 40%;
+    height: 70%;
+    z-index: 98;
+    background-color: var(--main-bg-color-dark);
+  
+    transition: 0.3s;
+  }
+
+  .mobile-nav-container.is_active {
+    left:60%;
+    top:0;
   }
 
   .logo {

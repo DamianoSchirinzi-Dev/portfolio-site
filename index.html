@@ -56,7 +56,7 @@
     </nav>
 
     <section class="section intro" id="section_intro">
-      <div class="content-block-intro">
+      <div class="content-block intro">
         <p class="main-text highlighted">Hi, my name is</p>
         <h1 class="header-text">Damiano Schirinzi</h1>
         <p class="main-text">
@@ -71,9 +71,9 @@
       <div class="sub-section intro">
         <h1 class="header-text">
           I like to create fun and
-          <strong class="header-text emphasis">interactive</strong>
+          <strong class="header-text-emphasis">interactive</strong>
           that have a
-          <strong class="header-text emphasis">human</strong> feel!
+          <strong class="header-text-emphasis">human</strong> feel!
         </h1>
       </div>
 
@@ -85,7 +85,7 @@
         <h1 class="header-text smaller">About me</h1>
       </div>
 
-      <div class="content-block-about">
+      <div class="content-block about">
         <p class="main-text">
           Aliquam erat volutpat. Quisque vel augue ac purus ornare tincidunt
           vitae quis nulla. In vitae mollis lacus. Vivamus tincidunt arcu sit
@@ -112,22 +112,73 @@
         <div class="photo-border"></div>
       </div>
 
-      <div class="cards-container">
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-description">
-            <p class="text-title">Dept</p>
-            <p class="text-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>         
-      </div>    
+      <div id="container">
+        <input
+          hidden
+          type="radio"
+          name="carousel-control"
+          id="button_a"
+          checked
+        />
+        <input hidden type="radio" name="carousel-control" id="button_b" />
+        <input hidden type="radio" name="carousel-control" id="button_c" />
+        <input hidden type="radio" name="carousel-control" id="button_d" />
 
+        <div id="carousel">
+          <div class="p-wrapper">
+            <section class="panel_1">
+              <h1 class="header-text carousel">Dept</h1>
+              <p class="main-text carousel">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                ornare faucibus diam id maximus. Fusce at efficitur nunc.
+                Curabitur sed ullamcorper orci. Nam nulla enim, ultricies nec
+                lectus a, commodo volutpat nisi. Pellentesque facilisis lacinia
+                ante, eu pulvinar ante varius a. Fusce tincidunt efficitur
+                tempor. Praesent pretium felis consectetur posuere sagittis. Sed
+                luctus nisl non vestibulum semper. Vivamus mi velit, porttitor
+                ac malesuada at, vulputate venenatis augue.
+              </p>         
+            </section>
+
+            <section class="panel_2">
+              <h2 class="header-text carousel">Blossom Studios</h2>
+              <p class="main-text carousel">
+                Duis sollicitudin nisi nulla. Duis fermentum consectetur ligula,
+                nec tincidunt mi luctus eget. Aliquam erat volutpat. Mauris
+                vitae tellus lectus. Integer dapibus ante sit amet augue
+                malesuada, vitae auctor mi hendrerit. Phasellus scelerisque
+                tempor lectus et venenatis. Donec vel sem turpis. Aenean
+                convallis iaculis enim eget varius.
+              </p>              
+            </section>
+
+            <section class="panel_3">
+              <h2 class="header-text carousel">Blossom Studios</h2>
+              <p class="main-text carousel">
+                Duis sollicitudin nisi nulla. Duis fermentum consectetur ligula,
+                nec tincidunt mi luctus eget. Aliquam erat volutpat. Mauris
+                vitae tellus lectus. Integer dapibus ante sit amet augue
+                malesuada, vitae auctor mi hendrerit. Phasellus scelerisque
+                tempor lectus et venenatis. Donec vel sem turpis. Aenean
+                convallis iaculis enim eget varius.
+              </p>              
+            </section>
+          </div>
+          <!-- // .p-wrapper -->
+        </div>
+        <!-- // #carousel -->
+
+        <div id="navigation">
+          <label for="button_a" class="label_a"> <span>1</span> </label>
+          <label for="button_b" class="label_b"> <span>2</span> </label>
+          <label for="button_c" class="label_c"> <span>3</span> </label>
+        </div>
+        <!-- // #navigation -->
       </div>
+      <!-- // #container -->
     </section>
 
-    <section class="section work" id="section_work">
+    <section class="section projects" id="section_work">
       <div class="section_title">
         <h1 class="header-text smaller">A few projects</h1>
       </div>

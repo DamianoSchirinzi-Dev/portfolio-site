@@ -15,6 +15,8 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Monserrat", "sans-serif"],
+        yeseva: ["Yeseva One", "sans-serif"],
       },
     },
   },

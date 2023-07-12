@@ -5,9 +5,9 @@ import AboutSection from "@/components/AboutSection";
 export default function Home() {
   return (
     <main>
-      <div>
-        <HeroBanner/>
+      <div className="bg-custom_dark">
         <Navigation />
+        <HeroBanner/>
       </div>
       
       <AboutSection />

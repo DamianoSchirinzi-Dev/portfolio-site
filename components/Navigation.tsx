@@ -9,7 +9,7 @@ export default function Navigation(){
     }
 
     return(
-        <nav className="absolute top-0 flex justify-between w-full px-24 py-8">
+        <nav className="top-0 flex justify-between w-full px-24 py-8">
           <h1 className="text-6xl">
             <strong>DS</strong>
           </h1>

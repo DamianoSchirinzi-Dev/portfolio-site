@@ -6,17 +6,17 @@ export default function Footer() {
   return (
     <div
       id="section-contact"
-      className="flex flex-row items-start justify-center gap-20 py-20 bg-custom_dark"
+      className="flex flex-col items-center justify-center gap-10 py-32 text-center bg-custom_dark lg:flex-row lg:items-start lg:justify-center lg:gap-28"
     >
-      <h1 className="font-serif text-6xl font-light">Get in Touch</h1>
-      <div className="flex flex-col w-2/6 gap-6 mr-10">
-        <p className="">
+      <h1 className="font-serif text-4xl font-light md:text-6xl">Get in Touch</h1>
+      <div className="flex flex-col items-center w-4/6 gap-10 lg:text-left lg:items-start lg:w-1/3">
+        <p className="w-2/3 text-sm leading-6 md:text-lg md:w-full">
           Although I’m not currently looking for any new opportunities, my inbox
           is always open. Whether you have a question or just want to say hi,
           I’ll try my best to get back to you!
         </p>
 
-        <div className="flex flex-row justify-start gap-8">
+        <div className="flex flex-row justify-center gap-8">
           <a href="https://github.com/DamianoSchirinzi-Dev">
             <Image src={GitHubLogo} alt="Github Logo" />
           </a>

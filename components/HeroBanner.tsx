@@ -4,11 +4,11 @@ import IntroWithCta from "@/components/IntroWithCta";
 
 export default function HeroBanner() {
   return (
-    <div className="flex flex-row items-start justify-between h-screen pt-12 bg-custom_dark">
+    <div className="flex flex-col items-center pt-12 pb-24 md:flex-row md:justify-evenly md:pt-0">
       <Image
         src={Banner}
         alt="BannerImage"
-        className="w-1/3 ml-40 rounded-2xl center"
+        className="object-cover w-1/2 rounded-2xl md:object-contain md:w-1/3"
       ></Image>
       <IntroWithCta/>
     </div>

@@ -10,7 +10,7 @@ export default function Footer() {
     >
       <h1 className="font-serif text-4xl font-light md:text-6xl">Get in Touch</h1>
       <div className="flex flex-col items-center w-4/6 gap-10 lg:text-left lg:items-start lg:w-1/3">
-        <p className="w-2/3 text-sm leading-6 md:text-lg md:w-full">
+        <p className="w-3/4 text-sm leading-6 md:text-lg md:w-full">
           Although I’m not currently looking for any new opportunities, my inbox
           is always open. Whether you have a question or just want to say hi,
           I’ll try my best to get back to you!

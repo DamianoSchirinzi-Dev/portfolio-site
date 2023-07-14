@@ -17,7 +17,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16">
+    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
       <a href="/">
        <h1 className="font-serif text-6xl">DS</h1>
       </a>
@@ -72,10 +72,10 @@ export default function Navigation() {
             <button onClick={() => scrollTo("about")}>About</button>
           </li>
           <li>
-            <button onClick={() => scrollTo("about")}>Projects</button>
+            <button onClick={() => scrollTo("projects")}>Projects</button>
           </li>
           <li>
-            <button onClick={() => scrollTo("about")}>Blog</button>
+            <button onClick={() => scrollTo("blogs")}>Blog</button>
           </li>{" "}
           <li>
             <button onClick={() => scrollTo("contact")}>Contact</button>
@@ -94,7 +94,7 @@ export default function Navigation() {
         top: 0;
         left: 0;
         background: black;
-        z-index: 10;
+        z-index: 20;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

@@ -19,10 +19,10 @@ export default function AboutSection() {
   ];
 
   return (
-    <div id="section-about">
+    <div id="section-about" className="bg-custom_light">
       <ul
         role="list"
-        className="flex flex-col items-center justify-between pt-4 pb-16 divide-y md:py-20 divide-gray"
+        className="flex flex-col items-center justify-between pt-4 pb-16 divide-y divide-gray-400 md:py-20"
       >
         <AboutMeBlock
           imageSrc={instagram.src}

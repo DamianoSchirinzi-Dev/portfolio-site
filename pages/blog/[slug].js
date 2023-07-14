@@ -1,6 +1,7 @@
 // pages/blog/[slug].js
-import { useRouter } from 'next/router';
-import blogs from '../../public/blogs/blogs.json';
+import { useRouter } from "next/router";
+import blogs from "../../public/blogs/blogs.json";
+import Navigation_Blogs from "../../components/Navigation_Blogs";
 
 const BlogPage = ({ blog }) => {
   const router = useRouter();
@@ -11,9 +12,14 @@ const BlogPage = ({ blog }) => {
   }
 
   return (
-    <div className='flex flex-col items-center h-full gap-8 pt-10 pb-20 text-center px-14 bg-custom_dark md:pt-20 md:gap-12 '>
-      <h1 className='font-serif text-5xl md:text-6xl'>{blog.title}</h1>
-      <p className='text-sm leading-6 sm:w-3/4 md:text-lg md:w-2/3 md:leading-8'>{blog.content}</p>
+    <div>
+      <Navigation_Blogs/>
+      <div className="flex flex-col items-center h-full gap-8 pt-10 pb-20 text-center px-14 bg-custom_dark md:pt-20 md:gap-12 ">
+        <h1 className="font-serif text-5xl md:text-6xl">{blog.title}</h1>
+        <p className="text-sm leading-6 sm:w-3/4 md:text-lg md:w-2/3 md:leading-8">
+          {blog.content}
+        </p>
+      </div>
     </div>
   );
 };

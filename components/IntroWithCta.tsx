@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Arrow from "../public/images/arrow.png";
+
 export default function IntroWithCta() {
   return (
     <div className="flex flex-col items-center w-4/6 gap-5 pt-12 text-center md:items-start md:text-left md:w-1/3">
@@ -8,9 +11,11 @@ export default function IntroWithCta() {
         <strong className="text-custom_highlight"> Software developer </strong>
         with a passion for all things digitial and creative.
       </h2>
-      <button className="px-5 py-3 text-xl font-bold text-center text-white rounded-full w-52 mt-7 bg-custom_highlight">
-        See my work
-      </button>
+      <div className="flex justify-center w-full">
+        <button className="px-5 py-3 text-xl font-bold text-center text-white rounded-full w-52 mt-7 bg-custom_highlight">
+          See my work
+        </button>
+      </div>
     </div>
   );
 }

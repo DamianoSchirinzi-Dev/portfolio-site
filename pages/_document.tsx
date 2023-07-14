@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 
 export default function Document() {
   return (
@@ -8,7 +6,6 @@ export default function Document() {
       <Head />
       <body className="leading-7 tracking-wide font-extralight font-montserrat text-custom_light ">
         <Main />
-        <Footer />
         <NextScript />
       </body>
     </Html>

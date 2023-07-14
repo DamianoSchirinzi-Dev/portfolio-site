@@ -29,7 +29,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <button className="w-40 py-3 mt-2 text-xl font-bold text-white rounded-full bg-custom_highlight">
+          <button onClick={() => console.log("Hello!")} className="w-40 py-3 mt-2 text-xl font-bold text-white rounded-full bg-custom_highlight">
             Say Hello
           </button>
         </div>

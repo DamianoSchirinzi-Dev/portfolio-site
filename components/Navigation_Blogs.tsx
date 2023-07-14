@@ -1,14 +1,31 @@
 import { useState } from "react";
+import Link from "next/link";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const scrollTo = (ID: string) => {
-    console.log("Clicked!");
-    var elementToScrollTo = document.getElementById(`section-${ID}`);
-    if (elementToScrollTo) {
-      elementToScrollTo.scrollIntoView({ behavior: "smooth" });
-    }
+    const router = useRouter();
+
+    useEffect(() => {
+      const handleRouteChangeComplete = () => {
+        const hash = window.location.hash;
+        if (hash) {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      };
+
+      router.events.on("routeChangeComplete", handleRouteChangeComplete);
+
+      return () => {
+        router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      };
+    }, []);
 
     if (isNavOpen) {
       setIsNavOpen(false);
@@ -33,7 +50,7 @@ export default function Navigation() {
 
           <div className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"}`}>
             <div
-              className="absolute top-0 right-0 pt-12 px-9 sm:pt-16"
+              className="absolute top-0 right-0 pt-8 px-9"
               onClick={() => setIsNavOpen(false)}
             >
               <svg
@@ -51,16 +68,16 @@ export default function Navigation() {
             </div>
             <ul className="flex flex-col items-center justify-between min-h-[250px] text-gray-300">
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("about")}>ABOUT</button>
+                <Link href="/#section-about">About</Link>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("about")}>PROJECTS</button>
+                <Link href="/#section-projects">Projects</Link>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("about")}>BLOG</button>
+                <Link href="/#section-blog">Blog</Link>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("contact")}>CONTACT</button>
+                <Link href="/#section-contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -68,16 +85,16 @@ export default function Navigation() {
 
         <ul className="hidden text-xl DESKTOP-MENU space-x-14 md:flex md:text-2xl md:space-x-18 lg:text-4xl lg:space-x-24">
           <li>
-            <button onClick={() => scrollTo("about")}>About</button>
+            <Link href="/#section-about">About</Link>
           </li>
           <li>
-            <button onClick={() => scrollTo("projects")}>Projects</button>
+            <Link href="/#section-projects">Projects</Link>
           </li>
           <li>
-            <button onClick={() => scrollTo("blogs")}>Blog</button>
-          </li>{" "}
+            <Link href="/#section-blog">Blog</Link>
+          </li>
           <li>
-            <button onClick={() => scrollTo("contact")}>Contact</button>
+            <Link href="/#section-contact">Contact</Link>
           </li>
         </ul>
       </nav>

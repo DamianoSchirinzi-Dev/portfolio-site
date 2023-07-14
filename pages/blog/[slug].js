@@ -2,6 +2,7 @@
 import { useRouter } from "next/router";
 import blogs from "../../public/blogs/blogs.json";
 import Navigation_Blogs from "../../components/Navigation_Blogs";
+import  Footer from "../../components/Footer";
 
 const BlogPage = ({ blog }) => {
   const router = useRouter();
@@ -20,6 +21,7 @@ const BlogPage = ({ blog }) => {
           {blog.content}
         </p>
       </div>
+      <Footer/>
     </div>
   );
 };

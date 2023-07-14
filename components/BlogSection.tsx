@@ -7,7 +7,7 @@ import Me from "../public/images/Me.jpg";
 export default function BlogSection() {
   return (
     <div className="h-full bg-custom_dark">
-      <div id="section-blogs" className="container flex flex-col items-center px-16 py-24 mx-auto gap-14 ">
+      <div id="section-blog" className="container flex flex-col items-center px-16 py-24 mx-auto gap-14 ">
         <h1 className="font-serif text-6xl text-enter">
           My <strong className="text-custom_highlight">Blog</strong>
         </h1>

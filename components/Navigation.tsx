@@ -54,10 +54,10 @@ export default function Navigation() {
                 <button onClick={() => scrollTo("about")}>ABOUT</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("about")}>PROJECTS</button>
+                <button onClick={() => scrollTo("projects")}>PROJECTS</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("about")}>BLOG</button>
+                <button onClick={() => scrollTo("blog")}>BLOG</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
                 <button onClick={() => scrollTo("contact")}>CONTACT</button>
@@ -74,7 +74,7 @@ export default function Navigation() {
             <button onClick={() => scrollTo("projects")}>Projects</button>
           </li>
           <li>
-            <button onClick={() => scrollTo("blogs")}>Blog</button>
+            <button onClick={() => scrollTo("blog")}>Blog</button>
           </li>{" "}
           <li>
             <button onClick={() => scrollTo("contact")}>Contact</button>

@@ -18,7 +18,7 @@ export default function AboutMeBlock(props: AboutMeBlockProps) {
       <div className="flex gap-x-4">
         <div className="flex-auto min-w-0">
           <h1
-            className={`font-serif ${
+            className={`font-serif hover:animate-pulse ${
               props.isTopHeading ? "text-5xl" : "text-4xl"
             } text-4xl font-light text-gray-900  ${
               props.isTopHeading ? "md:text-7xl md:pr-4" : "md:text-5xl"

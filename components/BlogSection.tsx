@@ -21,8 +21,8 @@ export default function BlogSection() {
               synopsis={blog.synopsis}
               content={blog.content}
               date={blog.Date}
-              imagePath={blog.ImagePath}
-              tags={blog.Tags}
+              imagePath={blog.imagePath}
+              tags={blog.tags}
             />
           ))}
         </div>

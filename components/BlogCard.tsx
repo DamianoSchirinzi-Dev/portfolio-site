@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ChatGPT from "../public/images/ChatGPT.jpg"
 import Link from "next/link";
 
 interface BlogCardProps {
@@ -19,7 +20,7 @@ export default function BlogCard(props: BlogCardProps) {
     >
       <Image
         className="w-full"
-        src={props.imagePath}
+        src={ChatGPT}
         width={200}
         height={200}
         alt="card-image"

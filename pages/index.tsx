@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
       <AboutSection />
       <BlogSection />
+      <ProjectsSection/>
       <Footer />
     </main>
   );

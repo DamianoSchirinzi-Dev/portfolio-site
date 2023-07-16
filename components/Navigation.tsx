@@ -16,7 +16,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
+    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
       <a href="/">
         <h1 className="font-serif text-5xl sm:text-7xl">DS</h1>
       </a>
@@ -49,7 +49,7 @@ export default function Navigation() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="flex flex-col items-center justify-between min-h-[250px] text-gray-300">
+            <ul className="flex flex-col items-center justify-between min-h-[250px] text-gray-200">
               <li className="my-8 uppercase border-b border-gray-400">
                 <button onClick={() => scrollTo("about")}>ABOUT</button>
               </li>

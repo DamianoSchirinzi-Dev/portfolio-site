@@ -4,11 +4,9 @@ import LinkedInLogo from "../public/images/linkedin.png";
 
 export default function Footer() {
   return (
-    <div>
-      <div className="border-b border-gray-600"></div>
-      <div
+    <div
         id="section-contact"
-        className="flex flex-col items-center justify-center gap-10 py-24 text-center bg-custom_dark lg:flex-row lg:items-start lg:justify-center lg:gap-28"
+        className="flex flex-col items-center justify-center gap-10 py-24 text-center text-gray-200 bg-custom_dark lg:flex-row lg:items-start lg:justify-center lg:gap-28"
       >
         <h1 className="font-serif text-4xl font-light md:text-6xl">
           Get in Touch
@@ -29,11 +27,10 @@ export default function Footer() {
             </a>
           </div>
 
-          <button onClick={() => console.log("Hello!")} className="w-40 py-3 mt-2 text-xl font-bold text-white rounded-full bg-custom_highlight">
+          <button className="w-40 py-3 mt-2 text-xl font-bold text-white rounded-full bg-custom_highlight">
             Say Hello
           </button>
         </div>
       </div>
-    </div>
   );
 }

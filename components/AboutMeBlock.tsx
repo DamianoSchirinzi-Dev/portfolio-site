@@ -16,7 +16,7 @@ export default function AboutMeBlock(props: AboutMeBlockProps) {
       } gap-10 text-center md:flex-row md:justify-center md:items-start md:gap-20 md:py-20`}
     >
       <div className="flex gap-x-4">
-        <div className="flex-auto min-w-0">
+        <div>
           <h1
             className={`font-serif hover:animate-pulse ${
               props.isTopHeading ? "text-5xl" : "text-4xl"

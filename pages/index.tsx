@@ -8,13 +8,12 @@ import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
   return (
     <main>
-      <div className="bg-custom_dark">
+      <div className="tracking-wide text-gray-200 bg-custom_dark font-extralight font-montserrat">
         <Navigation/>
         <HeroBanner />
       </div>
 
       <AboutSection />
-      <BlogSection />
       <ProjectsSection/>
       <Footer />
     </main>

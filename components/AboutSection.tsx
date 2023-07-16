@@ -20,9 +20,10 @@ export default function AboutSection() {
 
   return (
     <div id="section-about" className="bg-custom_light">
+      <SkillsMarquee />
       <ul
         role="list"
-        className="flex flex-col items-center justify-between pt-4 pb-16 divide-y divide-gray-400 md:py-20"
+        className="flex flex-col items-center justify-between pb-16 divide-y divide-gray-400 md:py-20"
       >
         <AboutMeBlock
           imageSrc={instagram.src}
@@ -40,11 +41,8 @@ export default function AboutSection() {
           header={header4}
           body="Donec ipsum nulla, malesuada id ex eget, luctus iaculis elit. Aliquam eleifend aliquam mi at ornare. Fusce eu massa mauris. Phasellus facilisis odio ac ante gravida, nec hendrerit lorem porta. Donec sagittis hendrerit vehicula. Ut euismod id risus eu fermentum. Cras sem magna, varius sed felis quis, porttitor volutpat est. "
           isLastHeading={true}
-      />
+        />
       </ul>
-      
-      <SkillsMarquee/>
-    
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
+    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-8 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-10 bg-custom_dark">
       <a href="/">
         <h1 className="font-serif text-5xl sm:text-7xl">DS</h1>
       </a>

@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Decal from "../public/images/path.png";
-
-interface SkillsBlockProps {
-    skillsName: string;
-}
+import { SkillsBlockProps } from "@/types/Types";
 
 export default function SkillsBlock(props: SkillsBlockProps) {
   return (

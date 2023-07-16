@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Arrow from "../public/images/arrow.png";
+import PillButton from "./PillButton";
+import { motion } from "framer-motion";
 
 export default function IntroWithCta() {
   return (
-    <div className="flex flex-col items-center w-4/6 gap-5 pt-12 text-center md:items-start md:text-left md:w-1/3">
+    <motion.div
+      initial={{ x: "-100vw"}}
+      animate={{ x: 0}}
+      transition={{ type: "spring", duration: 2.5}}
+      className="flex flex-col items-center w-4/6 gap-5 pt-12 text-center md:items-start md:text-left md:w-1/3"
+    >
       <h2 className="text-4xl xl:text-5xl">
         <strong className="text-custom_highlight">Hello</strong>, i'm{" "}
       </h2>
@@ -14,11 +21,16 @@ export default function IntroWithCta() {
         with a passion for all things digitial and creative.
       </h2>
       <div className="relative flex justify-center w-90">
-        <button className="px-5 py-3 text-xl font-bold text-center text-white rounded-full w-52 mt-7 bg-custom_highlight">
-          See my work
-        </button>
-        <Image src={Arrow} alt="" className="absolute bottom-0 object-cover -right-32 lg:rotate-45 lg:-bottom-20 lg:-right-48 lg:w-52 xl:rotate-12 xl:-bottom-8 xl:-right-42" />
+        <PillButton
+          label="See my work"
+          action={() => console.log("Callback!")}
+        />
+        <Image
+          src={Arrow}
+          alt=""
+          className="absolute bottom-0 object-cover -right-32 lg:rotate-45 lg:-bottom-20 lg:-right-48 lg:w-52 xl:rotate-12 xl:-bottom-8 xl:-right-42"
+        />
       </div>
-    </div>
+    </motion.div>
   );
 }

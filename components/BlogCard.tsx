@@ -1,15 +1,5 @@
 import Image from "next/image";
-import ChatGPT from "../public/images/ChatGPT.jpg"
-
-interface BlogCardProps {
-  slug: string;
-  title: string;
-  synopsis: string;
-  content: string;
-  date: string;
-  imagePath: string;
-  tags: string[];
-}
+import {BlogCardProps} from "../types/Types"
 
 export default function BlogCard(props: BlogCardProps) {
   return (

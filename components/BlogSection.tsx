@@ -1,4 +1,3 @@
-// pages/index.js
 import blogs from "../public/blogs/blogs.json";
 import BlogCard from "./BlogCard";
 

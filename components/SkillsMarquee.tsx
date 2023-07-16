@@ -1,5 +1,3 @@
-import Decal from '../public/images/path.png'
-import Image from 'next/image'
 
 export default function SkillsMarquee() {
   return (

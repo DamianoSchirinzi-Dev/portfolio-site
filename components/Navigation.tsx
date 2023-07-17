@@ -32,7 +32,7 @@ export default function Navigation() {
           <Image
             src={Vector}
             alt="Background Vector Image"
-            className="absolute -left-6 top-28 -rotate-12 sm:top-32 sm:left-11 sm:w-96 xl:w-3/12 xl:top-44 xl:left-4 xl:-rotate-12"
+            className="absolute w-56 -left-7 top-28 -rotate-12 sm:top-32 sm:left-11 sm:w-96 xl:w-3/12 xl:top-44 xl:left-4 xl:-rotate-12"
           />
         </motion.div>
         <a href="/">

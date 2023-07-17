@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Arrow from "../public/images/arrow.png";
+import Arrow from "../public/images/arrow.svg";
 import PillButton from "./PillButton";
 import { motion } from "framer-motion";
 
@@ -28,7 +28,7 @@ export default function IntroWithCta() {
         <Image
           src={Arrow}
           alt=""
-          className="absolute bottom-0 object-cover -right-32 lg:rotate-45 lg:-bottom-20 lg:-right-48 lg:w-52 xl:rotate-12 xl:-bottom-8 xl:-right-42"
+          className="absolute bottom-0 object-cover w-32 -right-24 lg:rotate-45 lg:-bottom-20 lg:-right-48 lg:w-52 xl:rotate-12 xl:-bottom-8 xl:-right-42"
         />
       </div>
     </motion.div>

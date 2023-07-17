@@ -1,7 +1,8 @@
 export interface AboutMeBlockProps {
   imageSrc: string;
   header: any;
-  body: string;
+  body1: string;
+  body2: string;
   isTopHeading?: boolean;
   isLastHeading?: boolean;
 }
@@ -19,6 +20,7 @@ export interface BlogCardProps {
 export interface PillButtonProps {
   label: string;
   action: Function;
+  isInFooter?: boolean;
 }
 
 export interface ProjectCardProps {

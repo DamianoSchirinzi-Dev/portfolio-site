@@ -10,7 +10,7 @@ export const PillButton = (props: PillButtonProps) => {
         transition: { duration: 0.5 },
       }}
       whileTap={{ scale: 0.95 }}
-      className="px-5 py-4 text-xl font-bold text-center text-white rounded-full w-52 mt-7 bg-custom_highlight"
+      className={`py-4 mr-2 text-xl font-bold text-center text-white rounded-full w-52 ${props.isInFooter ? "mt-2" : "mt-7"} bg-custom_highlight`}
     >
       {props.label}
     </motion.button>

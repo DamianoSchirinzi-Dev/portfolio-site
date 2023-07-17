@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Vector from "../public/images/Vector.svg";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -16,10 +19,29 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
-      <a href="/">
-        <h1 className="font-serif text-5xl sm:text-7xl">DS</h1>
-      </a>
+    <div className="relative flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
+      <div>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{ opacity: 100, }}
+          transition={{ duration: 2}}
+
+        >
+          <Image
+            src={Vector}
+            alt="Background Vector Image"
+            className="absolute -left-6 top-28 -rotate-12 sm:top-32 sm:left-11 sm:w-96 xl:w-3/12 xl:top-44 xl:left-4 xl:-rotate-12"
+          />
+        </motion.div>
+        <a href="/">
+          <h1 className="z-10 font-serif text-5xl sm:text-7xl">
+            DS<strong className="text-xl text-custom_highlight">.dev</strong>
+          </h1>
+        </a>
+      </div>
+
       <nav>
         <section className="flex MOBILE-MENU md:hidden">
           <div

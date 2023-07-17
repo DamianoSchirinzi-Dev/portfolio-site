@@ -29,8 +29,9 @@ export default function AboutMeBlock(props: AboutMeBlockProps) {
           </h1>
         </div>
       </div>
-      <div className="w-2/3 md:w-1/3 md:text-start">
-        <p className="text-sm text-gray-900 md:text-lg">{props.body}</p>
+      <div className="flex flex-col w-2/3 gap-4 md:w-1/3 md:text-start md:gap-6">
+        <p className="text-sm text-gray-900 md:text-lg">{props.body1}</p>
+        <p className="text-sm text-gray-900 md:text-lg">{props.body2}</p>
       </div>
     </motion.li>
   );

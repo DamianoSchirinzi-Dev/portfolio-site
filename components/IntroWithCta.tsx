@@ -23,7 +23,7 @@ export default function IntroWithCta() {
       <div className="relative flex justify-center w-90">
         <PillButton
           label="See my work"
-          action={() => console.log("Callback!")}
+          redirectUrl="projects"
         />
         <Image
           src={Arrow}

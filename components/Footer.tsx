@@ -36,8 +36,8 @@ export default function Footer() {
 
           <PillButton
             label="Say hello"
-            action={() => console.log("Callback!")}
             isInFooter={true}
+            redirectUrl="projects"
           />
         </div>
       </motion.div>

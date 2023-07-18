@@ -7,7 +7,6 @@ export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const scrollTo = (ID: string) => {
-    console.log("Clicked!");
     var elementToScrollTo = document.getElementById(`section-${ID}`);
     if (elementToScrollTo) {
       elementToScrollTo.scrollIntoView({ behavior: "smooth" });
@@ -18,24 +17,14 @@ export default function Navigation() {
     }
   };
 
+  const redirectTo = (url : string) => {
+    location.href = `/${url}`;
+  }
+
   return (
     <div className="relative flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
-      <div>     
-        <motion.div 
-        initial={{
-          opacity: 0
-        }}
-        animate={{
-          opacity:100
-        }}
-        whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.5 },
-        }}>
-
-          <Image src={Vector} alt="" className="absolute left-0 object-cover w-72 top-32 sm:w-96 xl:w-1/3 xl:-rotate-45 xl:left-36 xl:top-20"/>
-          </motion.div>
-        <a href="/">
+      <div>
+           <a href="/">
           <h1 className="z-10 font-serif text-5xl sm:text-7xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>
           </h1>
@@ -76,7 +65,7 @@ export default function Navigation() {
                 <button onClick={() => scrollTo("about")}>ABOUT</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("projects")}>PROJECTS</button>
+                <button onClick={() => redirectTo("projects")}>PROJECTS</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
                 <button onClick={() => scrollTo("blog")}>BLOG</button>
@@ -93,7 +82,7 @@ export default function Navigation() {
             <button onClick={() => scrollTo("about")}>About</button>
           </li>
           <li>
-            <button onClick={() => scrollTo("projects")}>Projects</button>
+            <button onClick={() => redirectTo("projects")}>Projects</button>
           </li>
           <li>
             <button onClick={() => scrollTo("blog")}>Blog</button>

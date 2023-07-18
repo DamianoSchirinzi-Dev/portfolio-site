@@ -19,8 +19,8 @@ export interface BlogCardProps {
 
 export interface PillButtonProps {
   label: string;
-  action: Function;
   isInFooter?: boolean;
+  redirectUrl?: any;
 }
 
 export interface ProjectCardProps {

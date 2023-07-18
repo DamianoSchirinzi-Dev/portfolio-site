@@ -37,20 +37,7 @@ export default function Navigation() {
 
   return (
     <div className="flex flex-row items-center justify-between px-10 pt-12 pb-8 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-10 bg-custom_dark">
-      <div>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{ opacity: 100 }}
-          transition={{ duration: 2 }}
-        >
-          <Image
-            src={Vector}
-            alt="Background Vector Image"
-            className="absolute -left-6 top-28 -rotate-12 sm:top-32 sm:left-11 sm:w-96 xl:w-3/12 xl:top-44 xl:left-4 xl:-rotate-12"
-          />
-        </motion.div>
+      <div>    
         <a href="/">
           <h1 className="z-10 font-serif text-5xl sm:text-7xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>

@@ -14,7 +14,7 @@ const BlogPage = ({ blog }) => {
 
   return (
     <div className="text-gray-200">
-      <Navigation_Blogs />
+      <Navigation_Alternate />
       <div className="flex flex-col items-center h-full gap-8 pt-10 pb-20 text-center px-14 text-custom_dark bg-custom_light md:pt-20 md:gap-12 ">
         <h1 className="font-serif text-5xl md:text-6xl">{blog.title}</h1>
         <p className="text-sm leading-6 sm:w-3/4 md:text-lg md:w-2/3 md:leading-8">

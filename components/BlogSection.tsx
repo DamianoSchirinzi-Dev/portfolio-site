@@ -1,31 +1,15 @@
-import blogs from "../public/blogs/blogs.json";
-import BlogCard from "./BlogCard";
+import { PostBlock } from "@/components/PostBlock";
 
-export default function BlogSection() {
+export default function BlogSection({posts}: {posts?:any}) {
   return (
-    <div className="h-full bg-custom_light">
-      <div
-        id="section-blog"
-        className="container flex flex-col items-center px-16 py-24 mx-auto gap-14 "
-      >
-        <h1 className="font-serif text-6xl text-custom_dark">
-          My <strong className="text-custom_highlight">Blog</strong>
-        </h1>
-
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-x-10 md:gap-y-6 lg:gap-y-2">
-          {blogs.map((blog) => (
-            <BlogCard
-              slug={blog.slug}
-              title={blog.title}
-              synopsis={blog.synopsis}
-              content={blog.content}
-              date={blog.Date}
-              imagePath={blog.imagePath}
-              tags={blog.tags}
-            />
-          ))}
-        </div>
-      </div>
+    <div className="container py-8 mx-auto">
+    <h3 className="text-xl">All my posts ({posts.length})</h3>
+    <div className="grid grid-flow-row grid-cols-1 my-6 md:grid-cols-2 lg:grid-cols-4">
+      {posts.map((post: any) => {
+        return <PostBlock key={post.slug} post={post} />;
+      })}
     </div>
+  </div>
   );
 }
+

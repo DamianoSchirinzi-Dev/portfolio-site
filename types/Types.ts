@@ -8,13 +8,8 @@ export interface AboutMeBlockProps {
 }
 
 export interface BlogCardProps {
-  slug: string;
-  title: string;
-  synopsis: string;
-  content: string;
-  date: string;
-  imagePath: string;
-  tags: string[];
+  key: string;
+  post: string;
 }
 
 export interface PillButtonProps {

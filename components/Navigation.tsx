@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Vector from "../public/images/Vector.svg";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -25,7 +22,7 @@ export default function Navigation() {
     <div className="relative flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
       <div>
            <a href="/">
-          <h1 className="z-10 font-serif text-5xl sm:text-7xl">
+          <h1 className="z-10 font-serif text-5xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>
           </h1>
         </a>
@@ -44,7 +41,7 @@ export default function Navigation() {
 
           <div className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"}`}>
             <div
-              className="absolute top-0 right-0 pt-12 px-9 sm:pt-16"
+              className="absolute top-0 right-0 pt-12 px-9"
               onClick={() => setIsNavOpen(false)}
             >
               <svg
@@ -77,7 +74,7 @@ export default function Navigation() {
           </div>
         </section>
 
-        <ul className="hidden text-xl DESKTOP-MENU space-x-14 md:flex md:text-2xl md:space-x-18 lg:text-4xl lg:space-x-24">
+        <ul className="hidden text-xl DESKTOP-MENU space-x-14 md:flex md:text-2xl md:space-x-18 lg:space-x-20">
           <li>
             <button onClick={() => scrollTo("about")}>About</button>
           </li>

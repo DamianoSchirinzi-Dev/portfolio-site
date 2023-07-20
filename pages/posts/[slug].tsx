@@ -10,7 +10,7 @@ export default function PostDetails({ post }: { post: any }) {
     <section>
       <NavigationAlt/>
       <div
-        className="relative flex flex-col items-center justify-center w-full min-h-[300px] lg:min-h-screen rounded-md"
+        className="object-cover relative flex flex-col items-center justify-center w-full min-h-[300px] lg:min-h-screen rounded-md"
         style={{
           backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
           backgroundSize: "cover",
@@ -21,7 +21,7 @@ export default function PostDetails({ post }: { post: any }) {
           className="absolute z-10 w-full h-full"
           style={{ backgroundColor: "rgba(0, 0, 0, .5)" }}
         ></div>
-        <div className="z-20 pt-32 text-center text-custom_light">
+        <div className="z-20 px-6 pt-24 text-center sm:pt-32 text-custom_light">
           <h1 className="mb-4 font-serif text-2xl md:text-4xl">{post.title}</h1>
           <p className="italic">By Damiano Schirinzi</p>
         </div>

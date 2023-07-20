@@ -7,8 +7,7 @@ export const PostBlock = ({ post }: { post: any }) => {
   let body = post.excerpt.replace(/(<([^>]+)>)/ig, "");
     
   return (
-    <div className="p-2 rounded-md post-block">
-        
+    <div className="p-2 rounded-md post-block">        
       <Link href={`/posts/${post.slug}`}>
         <div className="relative h-80 transition-all duration-200 ease-linear hover:-translate-y-[3px]">
           <Image

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["damianoschirinzi-portfolio.000webhostapp.com"],
+    domains: ["http://ds-portfolio-site.local", "damianoschirinzi-portfolio.000webhostapp.com"],
   }
 }
 

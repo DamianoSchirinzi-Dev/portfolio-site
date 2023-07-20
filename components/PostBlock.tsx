@@ -20,7 +20,7 @@ export const PostBlock = ({ post }: { post: any }) => {
       </Link>
       <Link href={`/blog/${post.slug}`} className="my-4 post-content ">
         <h3 className="py-6 font-serif text-3xl">{post.title}</h3>
-        <p className="italic">{synopsis}...</p>
+        <p className="text-gray-700 font-montserrat">{synopsis}...</p>
       </Link>
     </div>
   );

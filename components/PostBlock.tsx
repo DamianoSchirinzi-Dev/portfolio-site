@@ -4,8 +4,8 @@ import Image from "next/image";
 import defaultImage from "../public/images/BlogStock.jpg";
 
 export const PostBlock = ({ post }: { post: any }) => {
-  let body = post.excerpt.replace(/(<([^>]+)>)/ig, "");
-    
+  let synopsis = post.excerpt.replace(/(<([^>]+)>)/ig, "").substring(0, 140);
+      
   return (
     <div className="p-6 rounded-md shadow-lg text- post-block text-custom_dark bg-custom_light">        
       <Link href={`/posts/${post.slug}`}>
@@ -20,7 +20,7 @@ export const PostBlock = ({ post }: { post: any }) => {
       </Link>
       <Link href={`/blog/${post.slug}`} className="my-4 post-content ">
         <h3 className="py-6 font-serif text-3xl">{post.title}</h3>
-        <p className="italic">{body}</p>
+        <p className="italic">{synopsis}...</p>
       </Link>
     </div>
   );

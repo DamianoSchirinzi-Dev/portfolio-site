@@ -6,7 +6,7 @@ import PillButton from "./PillButton";
 
 export default function Footer() {
   return (
-    <div id="section-contact">
+    <div id="section-contact" className=" bg-custom_dark text-custom_light">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{

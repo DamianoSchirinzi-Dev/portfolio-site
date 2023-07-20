@@ -1,5 +1,4 @@
 export interface AboutMeBlockProps {
-  imageSrc: string;
   header: any;
   body1: string;
   body2: string;

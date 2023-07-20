@@ -40,7 +40,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-8 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-10 bg-custom_dark">
+    <div className="flex flex-row items-center justify-between px-10 pt-12 pb-8 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-10 bg-custom_dark text-custom_light">
         <a href="/">
           <h1 className="z-10 font-serif text-5xl sm:text-7xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>
@@ -119,7 +119,7 @@ export default function Navigation() {
         top: 0;
         left: 0;
         background: black;
-        z-index: 20;
+        z-index: 60;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

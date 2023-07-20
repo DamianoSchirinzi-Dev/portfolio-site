@@ -1,3 +1,5 @@
+import NavigationAlt from "@/components/Navigation_Alternate";
+import Footer from "@/components/Footer";
 import { GetStaticProps } from "next";
 import { GetStaticPaths } from "next";
 
@@ -5,9 +7,10 @@ import { getPosts, getPostBySlug } from "@/lib/service";
 
 export default function PostDetails({ post }: { post: any }) {
   return (
-    <section className="container py-12 mx-auto">
+    <section>
+      <NavigationAlt/>
       <div
-        className="post-header relative flex flex-col items-center justify-center w-full min-h-[200px] rounded-md"
+        className="relative flex flex-col items-center justify-center w-full min-h-[300px] lg:min-h-screen rounded-md"
         style={{
           backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
           backgroundSize: "cover",
@@ -18,15 +21,16 @@ export default function PostDetails({ post }: { post: any }) {
           className="absolute z-10 w-full h-full"
           style={{ backgroundColor: "rgba(0, 0, 0, .5)" }}
         ></div>
-        <div className="z-20 text-center">
-          <h1 className="mb-4 text-2xl md:text-4xl">{post.title}</h1>
-          <p className="italic">By Jeffrey</p>
+        <div className="z-20 pt-32 text-center text-custom_light">
+          <h1 className="mb-4 font-serif text-2xl md:text-4xl">{post.title}</h1>
+          <p className="italic">By Damiano Schirinzi</p>
         </div>
       </div>
       <div
-        className="w-full py-6 mx-auto mt-20 text-lg post-content md:w-3/5"
+        className="w-full px-12 pt-12 pb-16 text-lg md:w-3/5"
         dangerouslySetInnerHTML={{ __html: post.content }}
       ></div>
+      <Footer/>
     </section>
   );
 }

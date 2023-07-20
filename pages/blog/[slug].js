@@ -1,4 +1,3 @@
-// pages/blog/[slug].js
 import { useRouter } from "next/router";
 import blogs from "../../public/blogs/blogs.json";
 import Navigation_Alternate from "../../components/Navigation_Alternate";

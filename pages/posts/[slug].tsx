@@ -1,6 +1,7 @@
 import NavigationAlt from "@/components/Navigation_Alternate";
 import Footer from "@/components/Footer";
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
+import { GetStaticPaths } from "next";
 
 import { getPosts, getPostBySlug } from "@/lib/service";
 
@@ -43,10 +44,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getSer: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = await getPostBySlug(params?.slug as string);
 
   return {
     props: { post },
+    fallback: 'blocking',
   };
 };

@@ -36,11 +36,11 @@ export default function PostDetails({ post }: { post: any }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts(100); // retrieve first 100 posts
+  const posts = await getPosts(10); 
 
   return {
     paths: posts.map((post: any) => `/posts/${post.slug}`),
-    fallback: 'blocking',
+    fallback: true,
   };
 };
 

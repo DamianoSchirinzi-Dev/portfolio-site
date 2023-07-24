@@ -21,7 +21,7 @@ export default function Home({ posts }: { posts: any }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts(100); // retrieve first 100 posts
+  const posts = await getPosts(10); // retrieve first 100 posts
   console.log("Length : " + posts.length);
   return {
     props: {

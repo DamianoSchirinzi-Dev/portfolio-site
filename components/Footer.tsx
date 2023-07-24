@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import GitHubLogo from "../public/images/github.png";
 import LinkedInLogo from "../public/images/linkedin.png";
 import PillButton from "./PillButton";
+import ContactModal from "./ContactMeModal";
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div id="section-contact" className=" bg-custom_dark text-custom_light">
       <motion.div
@@ -37,8 +49,9 @@ export default function Footer() {
           <PillButton
             label="Say hello"
             isInFooter={true}
-            redirectUrl="projects"
+            onClickFunction={openModal}
           />
+          <ContactModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
       </motion.div>
     </div>

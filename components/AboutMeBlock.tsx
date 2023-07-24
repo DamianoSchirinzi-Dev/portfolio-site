@@ -4,6 +4,7 @@ import { AboutMeBlockProps } from "../types/Types";
 export default function AboutMeBlock(props: AboutMeBlockProps) {
   return (
     <motion.li
+      key={Math.random()}
       initial={{ opacity: 0}}
       whileInView={{
         opacity: 100, transition: { duration: 2.5} 

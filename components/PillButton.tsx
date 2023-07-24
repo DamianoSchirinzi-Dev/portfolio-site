@@ -9,7 +9,7 @@ export const PillButton = (props: PillButtonProps) => {
 
   return (
     <motion.button
-      onClick={() => redirectTo(props.redirectUrl)}
+      onClick={!props.isInFooter ? () =>  redirectTo(props.redirectUrl) : ()  => props.onClickFunction()}
       whileHover={{
         scale: 1.1,
         transition: { duration: 0.5 },

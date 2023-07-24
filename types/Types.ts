@@ -15,6 +15,7 @@ export interface PillButtonProps {
   label: string;
   isInFooter?: boolean;
   redirectUrl?: any;
+  onClickFunction?: any;
 }
 
 export interface ProjectCardProps {

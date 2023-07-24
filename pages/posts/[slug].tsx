@@ -6,6 +6,7 @@ import { GetStaticPaths } from "next";
 import { getPosts, getPostBySlug } from "@/lib/service";
 
 export default function PostDetails({ post }: { post: any }) {
+
   return (
     <section>
       <NavigationAlt/>
@@ -40,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: posts.map((post: any) => `/posts/${post.slug}`),
-    fallback: 'blocking',
+    fallback: true,
   };
 };
 

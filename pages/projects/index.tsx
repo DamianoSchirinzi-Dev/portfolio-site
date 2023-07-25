@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export default function projects() {
   return (
-    <div className="w-full mx-0 tracking-wide text-gray-200 bg-custom_dark font-extralight font-montserrat">
+    <div className="w-full mx-auto tracking-wide text-gray-200 bg-custom_dark font-extralight font-montserrat">
       <Navigation_Alternate />
       <div className="flex flex-col items-center h-full px-10 py-16 bg-custom_light lg:py-20">
         <h1 className="pb-10 font-serif text-5xl text-custom_dark lg:pb-14 lg:text-6xl group">

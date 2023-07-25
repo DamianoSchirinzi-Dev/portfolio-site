@@ -19,7 +19,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="sticky top-0 z-50 flex flex-row items-center justify-between px-10 pt-10 pb-6 text-lg md:pr-20 md:pl-16 bg-custom_dark">
+    <div className="sticky top-0 z-40 flex flex-row items-center justify-between px-10 pt-8 pb-6 text-lg md:pr-20 md:pl-16 bg-custom_dark">
       <div>
         <a href="/">
           <h1 className="z-10 font-serif text-5xl">
@@ -41,7 +41,7 @@ export default function Navigation() {
 
           <div className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"}`}>
             <div
-              className="absolute top-0 right-0 pt-12 px-9"
+              className="absolute top-0 right-0 pt-9 px-9"
               onClick={() => setIsNavOpen(false)}
             >
               <svg
@@ -65,9 +65,6 @@ export default function Navigation() {
                 <button onClick={() => redirectTo("projects")}>PROJECTS</button>
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
-                <button onClick={() => scrollTo("blog")}>BLOG</button>
-              </li>
-              <li className="my-8 uppercase border-b border-gray-400">
                 <button onClick={() => scrollTo("contact")}>CONTACT</button>
               </li>
             </ul>
@@ -80,10 +77,7 @@ export default function Navigation() {
           </li>
           <li>
             <button onClick={() => redirectTo("projects")}>Projects</button>
-          </li>
-          <li>
-            <button onClick={() => scrollTo("blog")}>Blog</button>
-          </li>{" "}
+          </li>       
           <li>
             <button onClick={() => scrollTo("contact")}>Contact</button>
           </li>

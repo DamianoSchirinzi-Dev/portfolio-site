@@ -40,7 +40,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="sticky top-0 flex flex-row items-center justify-between px-10 pt-12 pb-8 text-lg font-poppins text-custom_text_black md:pr-20 md:pl-16 md:pb-10 bg-custom_dark text-custom_light">
+    <div className="sticky top-0 z-40 flex flex-row items-center justify-between px-10 pt-8 pb-6 text-lg md:pr-20 md:pl-16 bg-custom_dark">
         <a href="/">
         <h1 className="z-10 font-serif text-5xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>
@@ -81,10 +81,7 @@ export default function Navigation() {
               </li>
               <li className="my-8 uppercase border-b border-gray-400">
                 <Link href="/#section-projects">Projects</Link>
-              </li>
-              <li className="my-8 uppercase border-b border-gray-400">
-                <Link href="/#section-blog">Blog</Link>
-              </li>
+              </li>           
               <li className="my-8 uppercase border-b border-gray-400">
                 <Link href="/#section-contact">Contact</Link>
               </li>
@@ -98,10 +95,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link href="/#section-projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/#section-blog">Blog</Link>
-          </li>
+          </li>       
           <li>
             <Link href="/#section-contact">Contact</Link>
           </li>

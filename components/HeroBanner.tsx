@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "../public/images/Me_B&W.png";
+import Banner from "../public/images/Me.jpg";
 import IntroWithCta from "@/components/IntroWithCta";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function HeroBanner() {
       initial={{ x: "-100vw"}}
       animate={{ x: 0 }}
       transition={{ type: "spring", duration: 3}}
-      className="flex flex-col items-center pt-12 pb-20 overflow-hidden md:h-screen md:pt-0 md:flex-row md:justify-evenly"
+      className="flex flex-col items-center pt-8 pb-20 overflow-hidden md:h-screen md:pt-0 md:flex-row md:justify-evenly"
     >
       <Image
         src={Banner}

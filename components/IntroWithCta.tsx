@@ -9,7 +9,7 @@ export default function IntroWithCta() {
       initial={{ x: "-100vw"}}
       animate={{ x: 0}}
       transition={{ type: "spring", duration: 2.5}}
-      className="flex flex-col items-center w-4/6 gap-5 pt-12 text-center md:items-start md:text-left md:w-1/3"
+      className="flex flex-col items-center w-4/6 gap-4 pt-8 text-center md:items-start md:text-left md:w-1/3"
     >
       <h2 className="text-4xl xl:text-5xl">
         <strong className="text-custom_highlight">Hello</strong>, i'm{" "}

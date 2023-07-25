@@ -23,7 +23,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 100,
-          transition: { duration: 2.5 },
+          transition: { duration: 1.5 },
         }}
         className="flex flex-col items-center justify-center gap-8 py-24 text-center lg:flex-row lg:items-start lg:justify-center lg:gap-28"
       >

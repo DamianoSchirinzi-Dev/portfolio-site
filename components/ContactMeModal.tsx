@@ -1,20 +1,22 @@
-
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
+import { motion } from "framer-motion";
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: any;
 }
 
-const ContactModal = ({ isOpen, onClose } : ContactModalProps) => {
+const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleChange = (e : any) => {
+  const [contacted, setContacted] = useState(false);
+
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -22,17 +24,23 @@ const ContactModal = ({ isOpen, onClose } : ContactModalProps) => {
     }));
   };
 
-  const handleSubmit = async (e : any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      await axios.post('/api/contact', formData);
-      console.log(e);
+      await axios
+        .post("/api/contact", formData)
+        .then(() => displaySuccessMessage());
+
       // You can add additional logic here, such as displaying a success message
-      onClose(); // Close the modal after successful submission
     } catch (error) {
       console.error(error);
       // Handle the error, e.g., display an error message to the user
     }
+  };
+
+  const displaySuccessMessage = () => {
+    setContacted(true);
+    setTimeout(onClose, 2000);
   };
 
   if (!isOpen) return null;
@@ -40,9 +48,9 @@ const ContactModal = ({ isOpen, onClose } : ContactModalProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="z-10 p-8 rounded-2xl bg-custom_dark text-custom_light">
+      <div className="z-10 flex flex-col items-center p-8 rounded-2xl bg-custom_dark text-custom_light">
         <h2 className="mb-4 text-2xl font-bold">Contact Me</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex flex-col items-center">
           <div className="mb-4">
             <label htmlFor="name">Name:</label>
             <input
@@ -81,17 +89,28 @@ const ContactModal = ({ isOpen, onClose } : ContactModalProps) => {
           </div>
           <button
             type="submit"
-            className="px-6 py-2 mt-4 text-white bg-green-500 rounded"
+            className="px-8 py-2 mt-4 text-white bg-green-500 rounded"
           >
-            Submit
+            Send
           </button>
         </form>
         <button
-          className="px-6 py-2 mt-4 text-white rounded bg-custom_highlight"
+          className="px-6 py-2 mt-4 mb-2 text-white rounded bg-custom_highlight"
           onClick={onClose}
         >
           Close
         </button>
+        {contacted && (
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 100 }}
+            transition={{ duration: 1.5 }}
+
+            className="px-4 pt-4"
+          >
+            Email successfully sent! 🎉
+          </motion.h2>
+        )}
       </div>
     </div>
   );

@@ -30,37 +30,6 @@ export default function projects() {
               codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
               synopsis="A frontend application made with Next.js that interacts with a weather API to bring live weather information"
             />
-
-            <ProjectCard
-              title="Mediterraneo Site"
-              codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              synopsis="A website I created for an authentic Greek restaurant, Mediterraneo."
-            />
-            <ProjectCard
-              title="Arctic Games Site"
-              codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              synopsis="A website I designed and created for the games studio 'Arctic Games'"
-            />
-            <ProjectCard
-              title="Weather App"
-              codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              synopsis="A frontend application made with Next.js that interacts with a weather API to bring live weather information"
-            />
-
-            <ProjectCard
-              title="Mediterraneo Site"
-              codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              synopsis="A website I created for an authentic Greek restaurant, Mediterraneo."
-            />
-            <ProjectCard
-              title="Arctic Games Site"
-              codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-              synopsis="A website I designed and created for the games studio 'Arctic Games'"
-            />
           </div>
         </div>
       </div>

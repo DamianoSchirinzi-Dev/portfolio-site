@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     from: email,
     to: "damianoschirinzi.devportfolio@gmail.com", // Replace with your email address
     subject: `Message from ${name}`,
-    text: message,
+    text: message + " was sent by: " + email,
   });
 
   res.status(200).json({ message: "Email sent successfully" });

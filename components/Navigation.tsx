@@ -14,14 +14,14 @@ export default function Navigation() {
     }
   };
 
-  const redirectTo = (url : string) => {
+  const redirectTo = (url: string) => {
     location.href = `/${url}`;
-  }
+  };
 
   return (
-    <div className="relative flex flex-row items-center justify-between px-10 pt-12 pb-4 text-lg md:pr-20 md:pl-16 md:pb-0 bg-custom_dark">
+    <div className="sticky top-0 z-50 flex flex-row items-center justify-between px-10 pt-10 pb-6 text-lg md:pr-20 md:pl-16 bg-custom_dark">
       <div>
-           <a href="/">
+        <a href="/">
           <h1 className="z-10 font-serif text-5xl">
             DS<strong className="text-xl text-custom_highlight">.dev</strong>
           </h1>
@@ -89,25 +89,25 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: black;
-        z-index: 20;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
+      <style jsx>{`
+        .hideMenuNav {
+          display: none;
+        }
+        .showMenuNav {
+          display: block;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: black;
+          z-index: 20;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+      `}</style>
     </div>
   );
 }

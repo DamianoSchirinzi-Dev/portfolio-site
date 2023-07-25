@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-
-interface ContactModalProps {
-  isOpen: boolean;
-  onClose: any;
-}
+import {ContactModalProps} from "../types/Types";
 
 const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [formData, setFormData] = useState({

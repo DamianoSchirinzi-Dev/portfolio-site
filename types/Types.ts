@@ -23,8 +23,14 @@ export interface ProjectCardProps {
   codeUrl: string;
   siteUrl?: string;
   synopsis: string;
+  icon: any;
 }
 
 export interface SkillsBlockProps {
   skillsName: string;
+}
+
+export interface ContactModalProps {
+  isOpen: boolean;
+  onClose: any;
 }

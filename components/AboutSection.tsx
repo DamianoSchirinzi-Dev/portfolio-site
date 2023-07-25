@@ -1,8 +1,5 @@
 import AboutMeBlock from "./AboutMeBlock";
 import SkillsMarquee from "./SkillsMarquee";
-import instagram from "../public/images/instagram.png";
-import Github from "../public/images/github.png";
-import linkedIn from "../public/images/linkedin.png";
 
 export default function AboutSection() {
   const header2 = [

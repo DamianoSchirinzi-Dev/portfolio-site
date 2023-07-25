@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import Vector from "../public/images/Vector.svg";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -28,11 +25,7 @@ export default function Navigation() {
       return () => {
         router.events.off("routeChangeComplete", handleRouteChangeComplete);
       };
-    }, []);
-
-    const redirectTo = (url : string) => {
-      location.href = `/${url}`;
-    }
+    }, []);   
 
     if (isNavOpen) {
       setIsNavOpen(false);

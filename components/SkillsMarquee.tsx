@@ -1,4 +1,3 @@
-
 export default function SkillsMarquee() {
   return (
     <div className="container pt-8 mx-auto sm:px-12 text-custom_dark_2">

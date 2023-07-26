@@ -21,6 +21,13 @@ export default function projects() {
               icon="🌅"
             />
             <ProjectCard
+              title="Free Framer Motion Components"
+              codeUrl="https://github.com/DamianoSchirinzi-Dev/framer-motion-playground"
+              siteUrl="https://framer-motion-playground-4m4w.vercel.app/"
+              synopsis="A small website / repo I use to store useful and re-usable framer motion animated React components!"
+              icon="🍃"
+            />
+            <ProjectCard
               title="Arctic Games Site"
               codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
               siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"

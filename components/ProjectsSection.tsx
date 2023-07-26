@@ -22,17 +22,18 @@ export default function ProjectsSection() {
           icon="🌅"
         />
         <ProjectCard
+          title="Free Framer Motion Components"
+          codeUrl="https://github.com/DamianoSchirinzi-Dev/framer-motion-playground"
+          siteUrl="https://framer-motion-playground-4m4w.vercel.app/"
+          synopsis="A small website / repo I use to store useful and re-usable framer motion animated React components!"
+          icon="🍃"
+        />
+        <ProjectCard
           title="Arctic Games Site"
           codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
           siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
           synopsis="A website I designed and created for the games studio 'Arctic Games'"
           icon="🎮"
-        />
-        <ProjectCard
-          title="Weather App"
-          codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-          synopsis="A frontend application made with Next.js that interacts with a weather API to bring live weather information"
-          icon="🌤️"
         />
       </div>
     </div>

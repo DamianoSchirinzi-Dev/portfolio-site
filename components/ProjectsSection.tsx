@@ -17,7 +17,7 @@ export default function ProjectsSection() {
         <ProjectCard
           title="Mediterraneo Site"
           codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-          siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
+          siteUrl="https://mediterraneo-restaurant-template.vercel.app/"
           synopsis="A website I created for an authentic Greek restaurant, Mediterraneo."
           icon="🌅"
         />

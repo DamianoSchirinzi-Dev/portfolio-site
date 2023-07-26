@@ -21,15 +21,15 @@ export default function ProjectCard(props: ProjectCardProps) {
         <div className="flex gap-2 font-semibold text-custom_highlight lg:text-lg xl:text-xl">
           <a
             className="hover:underline underline-offset-8"
-            href="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
+            href={props.codeUrl}
           >
             Code
           </a>
           {props.siteUrl != null && (
             <a
               className="hover:underline underline-offset-8"
-              href="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-            >
+              href={props.siteUrl}
+              >
               / Site
             </a>
           )}

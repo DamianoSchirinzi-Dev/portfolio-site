@@ -35,8 +35,8 @@ export default function AboutSection() {
         />
         <AboutMeBlock
           header={header4}
-          body1="I have just accepted a new job as a Full Stack Developer! The job involves working on cloud-based contact centre software using technologies such as Vue, Typescript, C# and Java!"
-          body2="Also, I have recently decided to get back into MMA! I will update accordingly!"
+          body1="I'm currently focused on sharpening my front-end skills, with a particular emphasis on React, CSS, and animation frameworks like Framer Motion."
+          body2=""
           isLastHeading={true}
         />
       </ul>

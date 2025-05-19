@@ -42,6 +42,13 @@ export default function projects() {
               icon="☕"
             />
             <ProjectCard
+              title="Framer Motion Playground"
+              codeUrl="https://github.com/DamianoSchirinzi-Dev/framer-motion-playground"
+              siteUrl="https://framer-motion-playground-delta.vercel.app/"
+              synopsis="A fun little playground to experiment with animated components using Framer Motion — bringing interfaces to life with motion."
+              icon="🏃‍♀️"
+            />
+            <ProjectCard
               title="3D Stoic Expo Room"
               codeUrl="https://github.com/DamianoSchirinzi-Dev/Stoic_Site"
               siteUrl="https://stoic-hub-alpha.vercel.app/"

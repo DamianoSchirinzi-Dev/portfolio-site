@@ -15,25 +15,25 @@ export default function ProjectsSection() {
       </Link>
       <div className="flex flex-col items-center justify-center gap-8 pb-14 sm:flex-row sm:flex-wrap lg:gap-12">
         <ProjectCard
-          title="Mediterraneo Site"
+          title="Mediterraneo"
           codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
           siteUrl="https://mediterraneo-restaurant-template.vercel.app/"
-          synopsis="A website I created for an authentic Greek restaurant, Mediterraneo."
+          synopsis="A vibrant and elegant website built for Mediterraneo, an authentic Greek restaurant. Developed with React.js and styled for a warm, Mediterranean feel."
           icon="🌅"
         />
         <ProjectCard
-          title="Free Framer Motion Components"
-          codeUrl="https://github.com/DamianoSchirinzi-Dev/framer-motion-playground"
-          siteUrl="https://framer-motion-playground-4m4w.vercel.app/"
-          synopsis="A small website / repo I use to store useful and re-usable framer motion animated React components!"
-          icon="🍃"
+          title="Escencia"
+          codeUrl="https://github.com/DamianoSchirinzi-Dev/escencia-restaurant-template"
+          siteUrl="https://escencia-restaurant-template.vercel.app/"
+          synopsis="A sleek, modern website designed for Escencia, a Japanese fusion restaurant. Built with Next.js to deliver fast performance and smooth UX."
+          icon="🍣"
         />
         <ProjectCard
-          title="Arctic Games Site"
+          title="Sipp"
           codeUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-          siteUrl="https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template"
-          synopsis="A website I designed and created for the games studio 'Arctic Games'"
-          icon="🎮"
+          siteUrl="https://sipp-site.vercel.app/"
+          synopsis="A clean, mobile-first site created for Sipp, a contemporary coffee house. Built with Next.js and designed for a cozy, inviting experience on any device."
+          icon="☕"
         />
       </div>
     </div>

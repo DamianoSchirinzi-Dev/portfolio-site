@@ -36,15 +36,6 @@ export default function PostDetails({ post }: { post: any }) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts(10); 
-
-  return {
-    paths: posts.map((post: any) => `/posts/${post.slug}`),
-    fallback: false,
-  };
-};
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = await getPostBySlug(params?.slug as string);
 

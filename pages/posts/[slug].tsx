@@ -1,8 +1,6 @@
 import NavigationAlt from "@/components/Navigation_Alternate";
 import Footer from "@/components/Footer";
 import { GetStaticProps } from "next";
-import { GetStaticPaths } from "next";
-
 import { getPosts, getPostBySlug } from "@/lib/service";
 
 export default function PostDetails({ post }: { post: any }) {

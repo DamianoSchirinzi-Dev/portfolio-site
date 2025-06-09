@@ -21,6 +21,13 @@ export default function projects() {
               icon="🌅"
             />
             <ProjectCard
+              title="Pomodoro Timer"
+              codeUrl="https://github.com/DamianoSchirinzi-Dev/pomodoro-timer"
+              siteUrl="https://pomodoro-timer-one-zeta.vercel.app/"
+              synopsis="A sleek and functional Pomodoro timer app built with React.js. Features work/break cycles, responsive design, and intuitive controls to boost productivity."
+              icon="⏲️"
+            />
+            <ProjectCard
               title="Three JS Portfolio"
               codeUrl="https://github.com/DamianoSchirinzi-Dev/Three.js-Demo-Site"
               siteUrl="https://three-js-demo-site.vercel.app/"

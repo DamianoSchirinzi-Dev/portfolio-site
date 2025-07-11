@@ -13,9 +13,27 @@
   }
 }
 
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
   }
 }
 
@@ -36,4 +54,22 @@
 
 .overflow-x-auto::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to right, #7c3aed, #db2777);
+}
+
+/* Performance optimizations */
+.framer-motion-element {
+  will-change: transform;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: auto !important;
+  }
 }

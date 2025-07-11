@@ -14,7 +14,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function sendContactEmail(formData: ContactFormData) {
   try {
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // safe fallback sender
+      from: "Damiano Schirinzi <hello@damianoschirinzi.dev>",
       to: ["damianoschirinzi.dev@gmail.com"],
       subject: `Portfolio Contact: ${formData.subject}`,
       html: `
@@ -23,7 +23,7 @@ export async function sendContactEmail(formData: ContactFormData) {
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>Subject:</strong> ${formData.subject}</p>
         <p><strong>Message:</strong></p>
-        <p>${formData.message.replace(/\n/g, '<br>')}</p>
+        <p>${formData.message.replace(/\n/g, "<br>")}</p>
       `,
     });
 

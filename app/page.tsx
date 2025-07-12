@@ -18,7 +18,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 // Lazy load the contact modal for better performance
-const ContactModal = lazy(() => import("@/components/contact-modal").then(module => ({ default: module.ContactModal })));
+const ContactModal = lazy(() =>
+  import("@/components/contact-modal").then((module) => ({
+    default: module.ContactModal,
+  }))
+);
 
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,7 +35,9 @@ export default function Portfolio() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   // Reduce motion for mobile devices
-  const shouldReduceMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const shouldReduceMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
@@ -42,7 +48,7 @@ export default function Portfolio() {
       title: "Escencia",
       description:
         "A sleek, modern website designed for Escencia, a Japanese fusion restaurant. Built with Next.js to deliver fast performance and smooth UX.",
-      image: "/images/escencia.png",
+      image: "/images/escencia.avif",
       tech: ["Next.js", "TypeScript", "Framer Motion"],
       github:
         "https://github.com/DamianoSchirinzi-Dev/escencia-restaurant-template",
@@ -52,7 +58,7 @@ export default function Portfolio() {
       title: "Habit Tracker Application",
       description:
         "Habit tracking application with real-time updates and analytics",
-      image: "/images/habittracker.png",
+      image: "/images/habittracker.avif",
       tech: ["NET 8", "Vue 3", "OpenAI"],
       github: "https://github.com/DamianoSchirinzi-Dev/solo-levelling-app",
     },
@@ -60,7 +66,7 @@ export default function Portfolio() {
       title: "Mediterraneo",
       description:
         "A vibrant and elegant website built for Mediterraneo, an authentic Greek restaurant. Developed with React.js and styled for a warm, Mediterranean feel.",
-      image: "/images/mediterraneo.png",
+      image: "/images/mediterraneo.avif",
       tech: ["Next.js", "Framer Motion", "Tailwind", "TypeScript"],
       github:
         "https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template",
@@ -70,7 +76,7 @@ export default function Portfolio() {
       title: "Time Management App",
       description:
         "A pomodoro timer application designed to boost productivity and focus. Features real-time tracking and analytics.",
-      image: "/images/pomodoro.png",
+      image: "/images/pomodoro.avif",
       tech: ["Next.js", "Tailwind"],
       github: "https://github.com/DamianoSchirinzi-Dev/pomodoro-timer",
       live: "https://pomodoro-timer-one-zeta.vercel.app/",
@@ -79,7 +85,7 @@ export default function Portfolio() {
       title: "THREE.js Demo Site",
       description:
         "A showcase of interactive 3D animations and effects using THREE.js. Built to demonstrate the power of WebGL and modern JavaScript.",
-      image: "/images/threejs.png",
+      image: "/images/threejs.avif",
       tech: ["Three.js", "Javascript"],
       github: "https://github.com/DamianoSchirinzi-Dev/Three.js-Demo-Site",
       live: "https://three-js-demo-site.vercel.app/",
@@ -91,6 +97,11 @@ export default function Portfolio() {
       name: "Frontend Development",
       icon: Code,
       description: "React, Next.js, Vue.js, TypeScript",
+    },
+    {
+      name: "Backend Development",
+      icon: Code,
+      description: ".NET, SQL, C#,",
     },
     {
       name: "UI/UX Design",
@@ -131,7 +142,7 @@ export default function Portfolio() {
               >
                 <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
                   <Image
-                    src="/images/me.png"
+                    src="/images/me.avif"
                     alt="Profile"
                     width={248}
                     height={248}
@@ -162,8 +173,8 @@ export default function Portfolio() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
           >
-            Full-Stack Developer & UI/UX Designer crafting digital experiences
-            that matter
+            Full‑Stack Developer & UI/UX Designer dedicated to crafting seamless
+            digital experiences that genuinely delight users.
           </motion.p>
 
           <motion.div
@@ -233,14 +244,14 @@ export default function Portfolio() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate full-stack developer with 5+ years of experience
-              creating digital solutions that combine beautiful design with
-              powerful functionality. I love turning complex problems into
-              simple, elegant solutions.
+              I’m a full‑stack developer with 6+ years of experience building
+              digital products that pair thoughtful design with robust
+              functionality. I turn complex problems into intuitive, elegant
+              solutions.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -385,7 +396,8 @@ export default function Portfolio() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+              Got a project idea? I’d love to hear about it. Let’s turn it into
+              reality together.
             </p>
 
             <motion.div
@@ -395,7 +407,13 @@ export default function Portfolio() {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
             >
-              <Suspense fallback={<div className="animate-pulse bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full">Loading...</div>}>
+              <Suspense
+                fallback={
+                  <div className="animate-pulse bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full">
+                    Loading...
+                  </div>
+                }
+              >
                 <ContactModal />
               </Suspense>
               <div className="flex gap-4">
@@ -433,9 +451,6 @@ export default function Portfolio() {
           >
             <p className="text-gray-400 mb-4 md:mb-0">
               © 2025 Damiano Schirinzi.
-            </p>
-            <p className="text-gray-400">
-              Built with Next.js, TypeScript & Framer Motion
             </p>
           </motion.div>
         </div>

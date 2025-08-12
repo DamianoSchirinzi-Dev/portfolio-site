@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Mail, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
 import {
@@ -33,17 +33,40 @@ interface FormErrors {
   message?: string
 }
 
-export function ContactModal() {
-  const [isOpen, setIsOpen] = useState(false)
+interface ContactModalProps {
+  isOpen?: boolean
+  onOpenChange?: (open: boolean) => void
+  defaultSubject?: string
+  triggerButton?: React.ReactNode
+}
+
+export function ContactModal({ 
+  isOpen: controlledIsOpen, 
+  onOpenChange, 
+  defaultSubject,
+  triggerButton
+}: ContactModalProps = {}) {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    subject: "",
+    subject: defaultSubject || "",
     message: "",
   })
   const [errors, setErrors] = useState<FormErrors>({})
+
+  // Use controlled or uncontrolled state
+  const isOpen = controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen
+  const setIsOpen = onOpenChange || setInternalIsOpen
+
+  // Update subject when defaultSubject changes
+  useEffect(() => {
+    if (defaultSubject && defaultSubject !== formData.subject) {
+      setFormData(prev => ({ ...prev, subject: defaultSubject }))
+    }
+  }, [defaultSubject, formData.subject])
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
@@ -95,7 +118,7 @@ export function ContactModal() {
 
       if (result.success) {
         setSubmitStatus("success")
-        setFormData({ name: "", email: "", subject: "", message: "" })
+        setFormData({ name: "", email: "", subject: defaultSubject || "", message: "" })
         // Close modal after 2 seconds
         setTimeout(() => {
           setIsOpen(false)
@@ -113,7 +136,7 @@ export function ContactModal() {
   }
 
   const resetForm = () => {
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    setFormData({ name: "", email: "", subject: defaultSubject || "", message: "" })
     setErrors({})
     setSubmitStatus("idle")
   }
@@ -129,13 +152,15 @@ export function ContactModal() {
       }}
     >
       <DialogTrigger asChild>
-        <Button
-          size="lg"
-          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full"
-        >
-          <Mail className="mr-2 h-5 w-5" />
-          Get In Touch
-        </Button>
+        {triggerButton || (
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full"
+          >
+            <Mail className="mr-2 h-5 w-5" />
+            Get In Touch
+          </Button>
+        )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] bg-white">
         <DialogHeader>

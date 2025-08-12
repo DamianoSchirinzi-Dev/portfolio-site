@@ -1,20 +1,20 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, lazy, Suspense } from "react";
+import { useRef, lazy, Suspense, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { projects } from "./data/projects";
+import { services } from "./data/services";
+import { skills } from "./data/skills";
 import {
   ArrowRight,
   Github,
   Linkedin,
-  Mail,
   ExternalLink,
   Download,
-  Code,
-  Palette,
-  Zap,
+  Check,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 // Lazy load the contact modal for better performance
@@ -26,6 +26,7 @@ const ContactModal = lazy(() =>
 
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -42,78 +43,6 @@ export default function Portfolio() {
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const projects = [
-    {
-      title: "Escencia",
-      description:
-        "A sleek, modern website designed for Escencia, a Japanese fusion restaurant. Built with Next.js to deliver fast performance and smooth UX.",
-      image: "/images/escencia.avif",
-      tech: ["Next.js", "TypeScript", "Framer Motion"],
-      github:
-        "https://github.com/DamianoSchirinzi-Dev/escencia-restaurant-template",
-      live: "https://escencia-restaurant-template.vercel.app/",
-    },
-    {
-      title: "Habit Tracker Application",
-      description:
-        "Habit tracking application with real-time updates and analytics",
-      image: "/images/habittracker.avif",
-      tech: ["NET 8", "Vue 3", "OpenAI"],
-      github: "https://github.com/DamianoSchirinzi-Dev/solo-levelling-app",
-    },
-    {
-      title: "Mediterraneo",
-      description:
-        "A vibrant and elegant website built for Mediterraneo, an authentic Greek restaurant. Developed with React.js and styled for a warm, Mediterranean feel.",
-      image: "/images/mediterraneo.avif",
-      tech: ["Next.js", "Framer Motion", "Tailwind", "TypeScript"],
-      github:
-        "https://github.com/DamianoSchirinzi-Dev/mediterraneo-restaurant_template",
-      live: "https://mediterraneo-restaurant-template.vercel.app/",
-    },
-    {
-      title: "Time Management App",
-      description:
-        "A pomodoro timer application designed to boost productivity and focus. Features real-time tracking and analytics.",
-      image: "/images/pomodoro.avif",
-      tech: ["Next.js", "Tailwind"],
-      github: "https://github.com/DamianoSchirinzi-Dev/pomodoro-timer",
-      live: "https://pomodoro-timer-one-zeta.vercel.app/",
-    },
-    {
-      title: "THREE.js Demo Site",
-      description:
-        "A showcase of interactive 3D animations and effects using THREE.js. Built to demonstrate the power of WebGL and modern JavaScript.",
-      image: "/images/threejs.avif",
-      tech: ["Three.js", "Javascript"],
-      github: "https://github.com/DamianoSchirinzi-Dev/Three.js-Demo-Site",
-      live: "https://three-js-demo-site.vercel.app/",
-    },
-  ];
-
-  const skills = [
-    {
-      name: "Frontend Development",
-      icon: Code,
-      description: "React, Next.js, Vue.js, TypeScript",
-    },
-    {
-      name: "Backend Development",
-      icon: Code,
-      description: ".NET, SQL, C#,",
-    },
-    {
-      name: "UI/UX Design",
-      icon: Palette,
-      description: "Figma, Adobe XD, Responsive Design",
-    },
-    {
-      name: "Performance",
-      icon: Zap,
-      description: "Optimization, SEO, Core Web Vitals",
-    },
-  ];
 
   return (
     <div ref={containerRef} className="relative">
@@ -377,6 +306,148 @@ export default function Portfolio() {
               ))}
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              My{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect package for your business needs. From simple
+              websites to comprehensive digital solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="group relative"
+              >
+                {service.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <Card
+                  className={`h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                    service.popular
+                      ? "ring-2 ring-purple-500/20 bg-gradient-to-br from-purple-50/50 to-pink-50/50"
+                      : "bg-gradient-to-br from-white to-gray-50"
+                  }`}
+                >
+                  <CardContent className="p-8 h-full flex flex-col">
+                    <div className="text-center mb-8">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center`}
+                      >
+                        <service.icon className="h-8 w-8 text-white" />
+                      </motion.div>
+
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        {service.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 mb-4">
+                        {service.subtitle}
+                      </p>
+
+                      <div className="mb-4">
+                        <span className="text-3xl font-bold text-gray-900">
+                          {service.price}
+                        </span>
+                        <span className="text-gray-500 text-sm ml-1">
+                          one-off
+                        </span>
+                        {service.monthlyPrice && (
+                          <div className="mt-2">
+                            <span className="text-lg font-semibold text-gray-700">
+                              {service.monthlyPrice}
+                            </span>
+                            <span className="text-gray-500 text-sm ml-1">
+                              monthly
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <div className="space-y-4 mb-8 flex-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <motion.div
+                          key={featureIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: featureIndex * 0.1,
+                          }}
+                          viewport={{ once: true }}
+                          className="flex items-start gap-3"
+                        >
+                          <div
+                            className={`flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center mt-0.5`}
+                          >
+                            <Check className="h-3 w-3 text-white" />
+                          </div>
+                          <span className="text-gray-700 text-sm leading-relaxed">
+                            {feature}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto">
+                      <Suspense
+                        fallback={
+                          <div className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white font-medium py-3 rounded-full transition-all duration-300 flex items-center justify-center animate-pulse`}>
+                            Loading...
+                          </div>
+                        }
+                      >
+                        <ContactModal 
+                          defaultSubject={`Learn more about ${service.name}`}
+                          triggerButton={
+                            <Button
+                              className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white font-medium py-3 rounded-full transition-all duration-300`}
+                            >
+                              Get Started
+                            </Button>
+                          }
+                        />
+                      </Suspense>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>  
         </div>
       </section>
 

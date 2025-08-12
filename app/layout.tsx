@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://damianoschirinzi.dev",
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: "Damiano Schirinzi - Full-Stack Developer & Designer",
     description: "Portfolio showcasing my work as a Full-Stack Developer and UI/UX Designer. Expert in React, Next.js, Vue.js, and modern web technologies.",

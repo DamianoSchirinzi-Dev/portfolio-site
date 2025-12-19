@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Local Business Website using Sanity.io CMS",
+    description:
+      "A flexible, modern website template built with small businesses in mind. Integrates Sanity.io for real-time content management.",
+    image: "/images/sanity_cms_template_site.avif",
+    tech: ["Next.js", "Sanity.io", "Framer Motion"],
+    github: "https://github.com/DamianoSchirinzi-Dev/site-template-cms",
+    live: "https://site-template-cms.vercel.app/",
+  },
+  {
     title: "Escencia",
     description:
       "A sleek, modern website designed for Escencia, a Japanese fusion restaurant. Built with Next.js to deliver fast performance and smooth UX.",

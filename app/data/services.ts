@@ -4,7 +4,7 @@ export const services = [
   {
     name: "Starter Website",
     subtitle: "Front-End Only",
-    price: "£750 – £1,200",
+    price: "£600 – £1,200",
     description:
       "Perfect for small businesses, personal brands, and portfolios looking to establish their online presence.",
     features: [
@@ -23,7 +23,7 @@ export const services = [
   {
     name: "Website with CMS",
     subtitle: "Content Management System",
-    price: "£1,500 – £2,800",
+    price: "£1,400 – £2,800",
     description:
       "Ideal for businesses that need to update content regularly without any coding knowledge. This package provides a user-friendly interface for managing site content.",
     features: [
@@ -41,7 +41,7 @@ export const services = [
   {
     name: "Full Service Package",
     subtitle: "Website + CMS + Ongoing Support",
-    price: "£2,500 – £4,500",
+    price: "£2,500 – £5,500",
     monthlyPrice: "£150 – £500/month",
     description:
       "Complete solution for businesses wanting a long-term partnership for continuous growth and support.",
